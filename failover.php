@@ -22,7 +22,7 @@
     Simple script to turn on/off Nagios notification/checks etc for use with
     Nagios failover hosts.
     Default is to turn on/off notifications.
-    Version 0.2
+    Version 0.3
 */
 
 // Variables to set for your environment
