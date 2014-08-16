@@ -1,3 +1,4 @@
+#!/usr/bin/php
 <?php
 /*
     Copyright (C) 2014 Jack-Benny Persson <jack-benny@cyberinfo.se>
@@ -21,7 +22,7 @@
     Simple script to turn on/off Nagios notification/checks etc for use with
     Nagios failover hosts.
     Default is to turn on/off notifications.
-    Version 0.1
+    Version 0.2
 */
 
 // Variables to set for your environment
@@ -60,7 +61,9 @@ else
         // If it has, enable the local Nagios and check if that command did run
         if ((runCmd($enableCmd)) == 0)
         {
-            // If we were successful in enabling the local Nagios, then quit
+            // If we were successful in enabling the local Nagios, then print
+            // a message about it and quit
+            print "Failover Nagios is now active!\n";
             exit(0);
         }
         else
